@@ -1,0 +1,16 @@
+// Verify email endpoint
+export const verifyEmail = (token) =>
+  api.get(`/auth/verify-email?token=${token}`);
+import api from "./axios";
+
+export const registerUser = (data) =>
+  api.post("/auth/register", data);
+
+export const loginUser = (data) =>
+  api.post("/auth/login", data);
+
+export const getMe = () =>
+  api.get("/users/me");
+
+export const refreshTokenFn = (data) =>
+  api.post("/auth/refresh", data);
